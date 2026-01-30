@@ -3,6 +3,8 @@ services:
     plan: free
     name: esgi-heroku-nodejs
     env: node
+    branch: main
+    region: frankfurt
     buildCommand: npm install
     startCommand: node ./bin/www
     envVars:
@@ -13,4 +15,5 @@ services:
 
 databases:
   - name: bpdb
+    region: frankfurt
     plan: free
