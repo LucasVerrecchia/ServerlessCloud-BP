@@ -1,14 +1,15 @@
 services:
-  type: web
-  name: esgi-heroku-nodejs
-  env: node
-  buildCommand: npm install
-  startCommand: node ./bin/www
-  envVars:
-    - key: DATABASE_URL
-      fromDatabase: bpdb
-      property: connectionString
+  - type: web
+    plan: free
+    name: esgi-heroku-nodejs
+    env: node
+    buildCommand: npm install
+    startCommand: node ./bin/www
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase: bpdb
+        property: connectionString
 
 databases:
-  name: bpdb
-  plan: free
+  - name: bpdb
+    plan: free
