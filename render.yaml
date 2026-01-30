@@ -7,8 +7,9 @@ services:
     startCommand: node ./bin/www
     envVars:
       - key: DATABASE_URL
-        fromDatabase: bpdb
-        property: connectionString
+        fromDatabase:
+          name: bpdb
+          property: connectionString
 
 databases:
   - name: bpdb
